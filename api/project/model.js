@@ -27,8 +27,7 @@ async function getById(project_id) {
         .first()
     
     const result = {
-        project_name: row.project_name,
-        project_description: row.project_description,
+        ...row,
         project_completed: (row.project_completed == 1)
     }
 
